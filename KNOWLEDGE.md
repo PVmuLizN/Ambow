@@ -17,3 +17,24 @@ JRE stands for **Java Runtime Environment**. It is a software package that conta
 Both JDK and JRE contain beans, but JDK also contains tools to create and manipulate beans. If you want to develop Java applications that use beans, you need JDK. If you only want to run Java applications that use beans, you need JRE.
 
 I hope this helps. If you have any more questions, feel free to ask.😊
+
+## 8 data types
+
+[1]: https://www.w3schools.com/java/java_data_types.asp "Java Data Types - W3Schools"
+[2]: https://www.geeksforgeeks.org/data-types-in-java/ "Java Data Types - GeeksforGeeks"
+[3]: https://mathcenter.oxford.emory.edu/site/cs170/variables/ "Variables and the 8 Primitive Data Types - Emory University"
+[4]: https://techvidvan.com/tutorials/data-types-in-java/ "Data Types in Java Programming with Implementation Examples"
+[5]: https://www.thepoorcoder.com/hackerrank-java-datatypes-solution/ "Hackerrank Java Datatypes Solution - The Poor Coder"
+
+According to several sources[^1^][1] [^2^][2] [^3^][3] [^4^][4] [^5^][5], the 8 data types in Java are:
+
+-   **byte**: a 8-bit signed integer that can store values from -128 to 127
+-   **char**: a 16-bit Unicode character that can store values from '\\u0000' to '\\uffff'
+-   **short**: a 16-bit signed integer that can store values from -32768 to 32767
+-   **int**: a 32-bit signed integer that can store values from -2147483648 to 2147483647
+-   **long**: a 64-bit signed integer that can store values from -9223372036854775808 to 9223372036854775807
+-   **float**: a 32-bit floating-point number that can store values with up to 7 decimal digits
+-   **double**: a 64-bit floating-point number that can store values with up to 16 decimal digits
+-   **boolean**: a 1-bit value that can store either true or false
+
+These are the basic data types that can be used to store single values in Java. There are also non-primitive data types, such as String, Array, and Class, that can store more complex or multiple values. You will learn more about them in later chapters.😊

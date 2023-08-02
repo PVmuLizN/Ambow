@@ -1,6 +1,40 @@
 # java 基础语法
 
-概念，数据类型， 表达式与运算符， 注释， 命名规范
+-   概念，
+-   数据类型
+    -   变量， 常量
+    -   **byte**: a 8-bit signed integer that can store values from -128 to 127
+    -   **char**: a 16-bit Unicode character that can store values from '\\u0000' to '\\uffff'
+    -   **short**: a 16-bit signed integer that can store values from -32768 to 32767
+    -   **int**: a 32-bit signed integer that can store values from -2147483648 to 2147483647
+    -   **long**: a 64-bit signed integer that can store values from -9223372036854775808 to 9223372036854775807
+        > must add `l` or `L` at the end.
+    -   **float**: a 32-bit floating-point number that can store values with up to 7 decimal digits
+        > must add `f` and the end.
+    -   **double**: a 64-bit floating-point number that can store values with up to 16 decimal digits
+    -   **boolean**: a 1-bit value that can store either true or false
+    -   精度缺失，浮点运算精度缺失，选择`double`规避
+    -   数据类型的转换
+        -   基本数据类型
+        -   引用数据类型
+            -   类
+            -   数组
+            -   接口
+        -   隐式转换
+            > 小的存储空间数据类型自动转换为存储空间大的数据类型  
+            > 子类对象自动转换为父类对象
+        -   强制类型转换
+            > 小数据类型的变量名 = （小数据类型）大数据类型的变量名
+            ```java
+            int a = 12;
+            byte b = (byte)a;
+            ```
+            ```java
+            Demo d = (Demo)new Object();
+            ```
+-   表达式与运算符
+-   注释，
+-   命名规范
 
 # 流程控制
 
