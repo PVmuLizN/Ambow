@@ -3,6 +3,8 @@
 -   概念，
 -   数据类型
     -   变量， 常量
+    -   声明与定义
+        > 运算时变量要有初始值
     -   **byte**: a 8-bit signed integer that can store values from -128 to 127
     -   **char**: a 16-bit Unicode character that can store values from '\\u0000' to '\\uffff'
     -   **short**: a 16-bit signed integer that can store values from -32768 to 32767
@@ -33,6 +35,8 @@
             Demo d = (Demo)new Object();
             ```
 -   表达式与运算符
+    - 计算结果，有唯一类型的值
+
 -   注释，
 -   命名规范
 
@@ -40,7 +44,8 @@
 
 `if`, `if-else`, `if-else-if`
 `while`, `for`,`break`, `continue`.  
-嵌套
+- 嵌套
+- switch
 
 # 面向对象
 

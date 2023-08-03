@@ -38,3 +38,17 @@ According to several sources[^1^][1] [^2^][2] [^3^][3] [^4^][4] [^5^][5], the 8 
 -   **boolean**: a 1-bit value that can store either true or false
 
 These are the basic data types that can be used to store single values in Java. There are also non-primitive data types, such as String, Array, and Class, that can store more complex or multiple values. You will learn more about them in later chapters.😊
+
+# Thu Aug 3 10:24:23 CST 2023
+
+## reference and object
+
+[1]: https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html "Object (Java Platform SE 8 ) - Oracle"
+[2]: https://stackoverflow.com/questions/16504084/what-is-object-reference-variable "java - What is Object Reference Variable? - Stack Overflow"
+[3]: https://www.infoworld.com/article/3512039/does-java-pass-by-reference-or-pass-by-value.html "Does Java pass by reference or pass by value? | InfoWorld"
+[4]: https://stackoverflow.com/questions/12565037/what-exactly-is-a-reference-in-java "What exactly is a reference in Java? - Stack Overflow"
+[5]: https://www.kdgregory.com/index.php?page=java.refobj "Java Reference Objects"
+
+In Java, `Object o = new Object()` creates a new object of type `Object` on the heap, and assigns a reference to that object to the variable `o` on the stack. The reference is a value that points to the memory location where the object resides, but it is not the object itself. You can think of it as an address or a pointer, but you cannot directly manipulate it like in C++. The reference variable `o` can be used to access the fields and methods of the object it refers to[^1^][1] [^2^][2].
+
+Some sources say that Java passes objects by reference, but this is not true. Java always passes arguments by value, meaning that a copy of the value is passed to a method. However, if the value is a reference, then passing a copy of the reference still allows the method to access and modify the original object[^3^][3] [^4^][4]. This can be confusing, but it is important to understand the difference between objects and references in Java[^5^][5].
