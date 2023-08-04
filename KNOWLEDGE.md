@@ -52,3 +52,53 @@ These are the basic data types that can be used to store single values in Java. 
 In Java, `Object o = new Object()` creates a new object of type `Object` on the heap, and assigns a reference to that object to the variable `o` on the stack. The reference is a value that points to the memory location where the object resides, but it is not the object itself. You can think of it as an address or a pointer, but you cannot directly manipulate it like in C++. The reference variable `o` can be used to access the fields and methods of the object it refers to[^1^][1] [^2^][2].
 
 Some sources say that Java passes objects by reference, but this is not true. Java always passes arguments by value, meaning that a copy of the value is passed to a method. However, if the value is a reference, then passing a copy of the reference still allows the method to access and modify the original object[^3^][3] [^4^][4]. This can be confusing, but it is important to understand the difference between objects and references in Java[^5^][5].
+
+# Fri Aug 4 09:28:22 CST 2023
+
+## JDBCUtil close all
+
+-   Close the connection
+-   pre-compile object
+-   result collection object
+
+## Java program memory allocation: stack and heap and others
+
+Java programs use two main memory areas for storing data: the stack and the heap.
+
+-   **Stack memory** is used to store local variables and method parameters. It is also used to store the call stack, which is a record of the method calls that have been made during the execution of the program. Stack memory is allocated and deallocated automatically by the Java Virtual Machine (JVM).
+-   **Heap memory** is used to store objects. Objects are created in the heap and can be accessed from anywhere in the program. Heap memory is not allocated and deallocated automatically by the JVM. Instead, the JVM uses a garbage collector to reclaim unused heap memory.
+
+In addition to stack and heap memory, Java programs also use a few other memory areas:
+
+-   **Method area** stores the Java class bytecode and constants.
+-   **Native heap** stores native memory that is allocated by the operating system.
+-   **PC registers** store the program counter, which is the address of the next instruction to be executed.
+
+The stack and heap are the most important memory areas for Java programs. The stack is used to store data that is needed for the current method call, while the heap is used to store objects that are created by the program. The JVM manages the stack and heap automatically, so programmers do not need to worry about memory management.
+
+Here is a table that summarizes the different memory areas in Java:
+
+| Memory area  | Description                                                    | Managed by JVM |
+| ------------ | -------------------------------------------------------------- | -------------- |
+| Stack        | Stores local variables and method parameters                   | Yes            |
+| Heap         | Stores objects                                                 | No             |
+| Method area  | Stores Java class bytecode and constants                       | Yes            |
+| Native heap  | Stores native memory that is allocated by the operating system | No             |
+| PC registers | Stores the program counter                                     | Yes            |
+
+I hope this helps! Let me know if you have any other questions.
+
+## Where is String data allocated in java
+
+String data in Java is allocated in the **heap** memory. The heap is a region of memory that is used to store objects. Objects are created in the heap and can be accessed from anywhere in the program. The heap is not allocated and deallocated automatically by the JVM. Instead, the JVM uses a garbage collector to reclaim unused heap memory.
+
+When a string is created in Java, the following happens:
+
+1. The JVM checks the **string constant pool** to see if the string already exists. If the string already exists, then the reference to the existing string is returned.
+2. If the string does not exist in the string constant pool, then a new string object is created in the heap. The string object contains the characters of the string and a reference to the string constant pool.
+
+The string constant pool is a special area of memory that is used to store strings that are used frequently. Strings that are stored in the string constant pool are shared by all objects that refer to them. This means that only one copy of the string data is stored in memory, even if multiple objects refer to the string.
+
+The heap is a more dynamic memory area than the string constant pool. Objects that are created in the heap can be garbage collected if they are no longer needed. This means that the heap can be used to store strings that are not used frequently.
+
+I hope this helps! Let me know if you have any other questions.

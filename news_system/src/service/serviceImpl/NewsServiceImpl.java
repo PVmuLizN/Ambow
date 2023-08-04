@@ -37,6 +37,7 @@ public class NewsServiceImpl implements NewsService {
         } finally {
             JDBCUtil.closeAll(conn, ps, rs);
         }
+        System.out.println(users.getUid()+users.getUsername()+users.getPassword());
 
     }
 }
