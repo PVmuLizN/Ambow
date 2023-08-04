@@ -39,14 +39,14 @@ public class JDBCUtil {
                 e.printStackTrace();
             }
         }
-         if (ps != null) {
+        if (ps != null) {
             try {
                 ps.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
-         if (rs != null) {
+        if (rs != null) {
             try {
                 rs.close();
             } catch (SQLException e) {
