@@ -2,6 +2,8 @@ package utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class JDBCUtil {
@@ -27,10 +29,26 @@ public class JDBCUtil {
     }
 
     // Close the connection
-    public static void close(Connection conn) {
+    // pre-compile object
+    // result collection object
+    public static void closeAll(Connection conn, PreparedStatement ps, ResultSet rs) {
         if (conn != null) {
             try {
                 conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+         if (ps != null) {
+            try {
+                ps.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+         if (rs != null) {
+            try {
+                rs.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
