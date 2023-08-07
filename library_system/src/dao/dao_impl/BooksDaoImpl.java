@@ -13,9 +13,9 @@ import po.Books;
 import utils.JDBCUtil;
 
 public class BooksDaoImpl implements BooksDao {
-    Connection conn = null;
-    PreparedStatement ps = null;
-    ResultSet rs = null;
+    private Connection conn = null;
+    private PreparedStatement ps = null;
+    private ResultSet rs = null;
 
     @Override
     public List<Books> getAllBooks() {

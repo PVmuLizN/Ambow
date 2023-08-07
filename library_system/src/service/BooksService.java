@@ -54,6 +54,6 @@ public interface BooksService {
      * @tips: 先查后删
      */
 
-     int deleteBooks(int id);
+     int deleteBooks(Books book);
 
 }
