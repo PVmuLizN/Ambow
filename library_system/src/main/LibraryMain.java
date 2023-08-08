@@ -10,7 +10,10 @@ import service.BooksService;
 import service.service_impl.BooksServiceImpl;
 import utils.KeyboardUtil;
 import view.BooksView;
-
+/**
+ * @time Tue Aug  8 11:58:07 CST 2023
+ * @implNote 目前这个类中的所有增删改查方法的返回值类型与service相同，将来要改成自然语言提示（void）.
+ */
 public class LibraryMain {
     private BooksService bs = null;
 
