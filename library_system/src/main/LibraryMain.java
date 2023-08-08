@@ -114,34 +114,66 @@ public class LibraryMain {
 
     }
 
+    /**
+     * @author weihuanchun
+     * @return
+     */
     private List<Books> queryAllBooks() {
         return bs.queryAllBooks();
     }
 
+    /**
+     * @author weihuanchun
+     * @return
+     */
     private Books queryBooksById(int id) {
         return bs.queryBooksById(id);
     }
 
+    /**
+     * @author weihuanchun
+     * @return
+     */
     private Books queryBooksByIsbn(String isbn) {
         return bs.queryBooksByIsbn(isbn);
     }
 
+    /**
+     * @author weihuanchun
+     * @return
+     */
     private List<Books> queryBooksByTitle(String title) {
         return bs.queryBooksByTitle(title);
     }
 
+    /**
+     * @author weihuanchun
+     * @return
+     */
     private List<Books> queryBooksByPublisher(String publisher) {
         return bs.queryBooksByPublisher(publisher);
     }
 
+    /**
+     * @author weihuanchun
+     * @return
+     */
     private List<Books> queryBooksByPublicationDate(Date date) {
         return bs.queryBooksByPublicationDate(date);
     }
 
+    /**
+     * @author weihuanchun
+     * @return
+     */
     private List<Books> queryBooksByStatus(String status) {
         return bs.queryBooksByStatus(status);
     }
 
+    /**
+     * @author weihuanchun
+     * @return
+     */
     private static ArrayList<Books> getIntersection(List<Books> booksByTitle, List<Books> booksByPublisher,
             List<Books> booksByDate, List<Books> booksByStatus) {
         ArrayList<Books> intersection = new ArrayList<>();
