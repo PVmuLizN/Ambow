@@ -175,6 +175,7 @@ public class LibraryMain {
 
     /**
      * @author weihuanchun
+     * @purpose 取交集
      * @return
      */
     private static ArrayList<Books> getIntersection(List<Books> booksByTitle, List<Books> booksByPublisher,
