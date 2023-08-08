@@ -10,7 +10,7 @@ import po.Books;
 import service.BooksService;
 
 public class BooksServiceImpl implements BooksService {
-    BooksDao booksDao;
+    private BooksDao booksDao;
 
     public BooksServiceImpl() {
         this.booksDao = new BooksDaoImpl();
