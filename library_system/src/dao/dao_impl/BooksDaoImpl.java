@@ -257,7 +257,7 @@ public class BooksDaoImpl implements BooksDao {
         int result = 0;
         try {
 
-            String sql = "INSERT INTO Books (Title, Author, Publisher, PublicationDate, Status) VALUES (?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO Books (BookID, Title, Author, Publisher, PublicationDate, Status) VALUES (null,?, ?, ?, ?, ?)";
             conn = JDBCUtil.getConnection();
             ps = conn.prepareStatement(sql);
             ps.setString(1, book.getTitle());
