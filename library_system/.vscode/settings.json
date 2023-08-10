@@ -17,7 +17,7 @@
             "driver": "MySQL",
             "name": "library_system",
             "group": "ambow",
-            "database": "library_system",
+            "database": "library",
             "username": "root",
             "password": ""
         }
