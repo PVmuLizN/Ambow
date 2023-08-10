@@ -4,6 +4,7 @@ import java.util.List;
 import main.AdminMain;
 import main.BooksMain;
 import main.FinesMain;
+import main.ReadersMain;
 import po.Admin;
 import po.Books;
 import service.AdminService;
@@ -17,16 +18,16 @@ public class App {
         AdminService as = new AdminService();
         AdminMain am = new AdminMain();
         Admin adminCheck = null;
-        int i = 5;
+        // int i = 5;
 
-        while (i > 0) {
-            System.out.println("您还有" + i + "次机会");
+        while (true) {
+            // System.out.println("您还有" + i + "次机会");
             adminCheck = am.start();
             if (adminCheck != null)
                 break;
-            i--;
+            // i--;
         }
-        if (i < 1) System.exit(0); // 5 次机会 退出
+        // if (i < 1) System.exit(0); // 5 次机会 退出
         StartView.mainView();
 
         int choose = KeyboardUtil.readInt();
@@ -67,6 +68,12 @@ public class App {
                 FinesMain fm = new FinesMain();
                 fm.Fines();
                 break;
+            case 4:
+                ReadersMain rm = new ReadersMain();
+                rm.operate();
+                break;
+            case 0:
+                StartView.mainView();
             default:
                 System.out.println("请重新选择");
                 StartView.mainView();

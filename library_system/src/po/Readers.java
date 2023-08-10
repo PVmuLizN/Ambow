@@ -1,29 +1,22 @@
 package po;
 
+
+/**
+ * @Sundengyue
+ */
 public class Readers {
-    private int readerID;
+    private Integer readerid;
     private String name;
-    private String IDCardNumber;
-    private String phoneNumber;
+    private String idcardnumber;
+    private String phonenumber;
     private String address;
 
-    public Readers() {
+    public Integer getReaderid() {
+        return readerid;
     }
 
-    public Readers(int readerID, String name, String IDCardNumber, String phoneNumber, String address) {
-        this.readerID = readerID;
-        this.name = name;
-        this.IDCardNumber = IDCardNumber;
-        this.phoneNumber = phoneNumber;
-        this.address = address;
-    }
-
-    public int getReaderID() {
-        return readerID;
-    }
-
-    public void setReaderID(int readerID) {
-        this.readerID = readerID;
+    public void setReaderid(Integer readerid) {
+        this.readerid = readerid;
     }
 
     public String getName() {
@@ -34,20 +27,20 @@ public class Readers {
         this.name = name;
     }
 
-    public String getIDCardNumber() {
-        return IDCardNumber;
+    public String getIdcardnumber() {
+        return idcardnumber;
     }
 
-    public void setIDCardNumber(String IDCardNumber) {
-        this.IDCardNumber = IDCardNumber;
+    public void setIdcardnumber(String idcardnumber) {
+        this.idcardnumber = idcardnumber;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhonenumber() {
+        return phonenumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
     }
 
     public String getAddress() {
