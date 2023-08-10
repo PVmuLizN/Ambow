@@ -1,64 +1,58 @@
 package po;
-import java.sql.Date;
 
-public class ReservationRecords  {
-
-    private static final long serialVersionUID = 1L;
-
-    private int reservationID;
-    private int bookID;
-    private int readerID;
-    private Date reservationDate;
-    private String bookTaken;
-
-    public ReservationRecords() {
-    }
-
-    public ReservationRecords(int reservationID, int bookID, int readerID, Date reservationDate, String bookTaken) {
-        this.reservationID = reservationID;
-        this.bookID = bookID;
-        this.readerID = readerID;
-        this.reservationDate = reservationDate;
-        this.bookTaken = bookTaken;
-    }
+/**
+ * ClassName: aaaaaa
+ * Package: main
+ * Description: 类的描述
+ *
+ * @Author 王志鹏
+ * @Create 2023/8/10 16:05
+ * @Version 1.0 版本号
+ */
+public class ReservationRecords {
+    private int ReservationID;
+    private  int BookID;
+    private int ReaderID;
+    private String ReservationDate;
+    private String BookTaken;
 
     public int getReservationID() {
-        return reservationID;
+        return ReservationID;
     }
 
     public void setReservationID(int reservationID) {
-        this.reservationID = reservationID;
+        ReservationID = reservationID;
     }
 
     public int getBookID() {
-        return bookID;
+        return BookID;
     }
 
     public void setBookID(int bookID) {
-        this.bookID = bookID;
+        BookID = bookID;
     }
 
     public int getReaderID() {
-        return readerID;
+        return ReaderID;
     }
 
     public void setReaderID(int readerID) {
-        this.readerID = readerID;
+        ReaderID = readerID;
     }
 
-    public Date getReservationDate() {
-        return reservationDate;
+    public String getReservationDate() {
+        return ReservationDate;
     }
 
-    public void setReservationDate(Date reservationDate) {
-        this.reservationDate = reservationDate;
+    public void setReservationDate(String reservationDate) {
+        ReservationDate = reservationDate;
     }
 
     public String getBookTaken() {
-        return bookTaken;
+        return BookTaken;
     }
 
     public void setBookTaken(String bookTaken) {
-        this.bookTaken = bookTaken;
+        BookTaken = bookTaken;
     }
 }

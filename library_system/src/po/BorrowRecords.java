@@ -1,30 +1,16 @@
 package po;
 
-import java.sql.Date;
-
-public class BorrowRecords {
-
+/**
+ * @author 张东旭
+ */
+public class BorrowreCords {
     private int borrowID;
     private int bookID;
     private int readerID;
-    private Date borrowDate;
-    private Date dueDate;
-    private Date returnDate;
+    private String borrowDate;
+    private String dueDate;
+    private String returnDate;
     private String returned;
-
-    public BorrowRecords() {
-    }
-
-    public BorrowRecords(int borrowID, int bookID, int readerID, Date borrowDate, Date dueDate, Date returnDate,
-            String returned) {
-        this.borrowID = borrowID;
-        this.bookID = bookID;
-        this.readerID = readerID;
-        this.borrowDate = borrowDate;
-        this.dueDate = dueDate;
-        this.returnDate = returnDate;
-        this.returned = returned;
-    }
 
     public int getBorrowID() {
         return borrowID;
@@ -50,27 +36,27 @@ public class BorrowRecords {
         this.readerID = readerID;
     }
 
-    public Date getBorrowDate() {
+    public String getBorrowDate() {
         return borrowDate;
     }
 
-    public void setBorrowDate(Date borrowDate) {
+    public void setBorrowDate(String borrowDate) {
         this.borrowDate = borrowDate;
     }
 
-    public Date getDueDate() {
+    public String getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(Date dueDate) {
+    public void setDueDate(String dueDate) {
         this.dueDate = dueDate;
     }
 
-    public Date getReturnDate() {
+    public String getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(Date returnDate) {
+    public void setReturnDate(String returnDate) {
         this.returnDate = returnDate;
     }
 

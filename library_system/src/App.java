@@ -3,8 +3,10 @@ import java.util.List;
 
 import main.AdminMain;
 import main.BooksMain;
+import main.BorrowreCordsCordsMain;
 import main.FinesMain;
 import main.ReadersMain;
+import main.ReservationRecordsMain;
 import po.Admin;
 import po.Books;
 import service.AdminService;
@@ -63,7 +65,10 @@ public class App {
 
                 }
                 break;
-
+            case 2:
+                BorrowreCordsCordsMain bcm = new BorrowreCordsCordsMain();
+                bcm.BorrowCaords();
+                break;
             case 3:
                 FinesMain fm = new FinesMain();
                 fm.Fines();
@@ -72,8 +77,13 @@ public class App {
                 ReadersMain rm = new ReadersMain();
                 rm.operate();
                 break;
+            case 5:
+                ReservationRecordsMain rrm = new ReservationRecordsMain();
+                rrm.RRmain();
+                break;
             case 0:
                 StartView.mainView();
+                break;
             default:
                 System.out.println("请重新选择");
                 StartView.mainView();
