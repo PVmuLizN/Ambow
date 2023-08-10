@@ -33,7 +33,8 @@ public class BooksMain {
         int choice = KeyboardUtil.readInt();
         switch (choice) {
             case 1:
-                this.queryAllBooks();
+                // this.queryAllBooks();
+                booksRes.addAll(this.queryAllBooks());
                 break;
             case 2:
 
