@@ -3,7 +3,7 @@ package po;
 /**
  * @author 张东旭
  */
-public class BorrowreCords {
+public class BorrowRecords {
     private int borrowID;
     private int bookID;
     private int readerID;
