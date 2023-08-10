@@ -1,11 +1,11 @@
 import utils.KeyboardUtil;
-import view.BooksView;
+import view.StartView;
 
 public class App {
     public static void main(String[] args) throws Exception {
         if (users != null) {
             // 登录成功调用主界面
-            BooksView.mainView();
+            StartView.mainView();
             // 接收选择的数值
             int a = KeyboardUtil.readInt();
             switch (a) {
