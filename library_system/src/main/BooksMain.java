@@ -61,6 +61,7 @@ public class BooksMain {
                 List<Books> booksByStatus = this.queryBooksByStatus(status);
 
                 booksRes = getIntersection(booksByTitle, booksByPublisher, booksByDate, booksByStatus);
+                break;
             default:
                 System.out.println("Something went wrong!!!");
 
@@ -77,10 +78,13 @@ public class BooksMain {
         switch (choose) {
             case 1:
                 res = this.changeBooks(book);
+                break;
             case 2:
                 res = this.addBooks(book);
+                break;
             case 3:
                 res = this.deleteBooks(book);
+                break;
         }
         return res;
     }

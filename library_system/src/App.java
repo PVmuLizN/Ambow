@@ -48,6 +48,7 @@ public class App {
                         } else {
                             System.out.println("没有找到书籍");
                         }
+                        break;
                     case 2:
                         Books book = new Books();
                         int res = bm.modifyBooks(book);
@@ -56,8 +57,10 @@ public class App {
                         } else {
                             System.out.println("修改失败");
                         }
+                        break;
 
                 }
+                break;
 
             case 2:
 
