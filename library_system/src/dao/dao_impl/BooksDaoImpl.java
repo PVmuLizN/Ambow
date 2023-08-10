@@ -22,7 +22,7 @@ public class BooksDaoImpl implements BooksDao {
         List<Books> books = new ArrayList();
 
         try {
-            String sql = "SELECT * FROM books";
+            String sql = "SELECT * FROM Books";
             conn = JDBCUtil.getConnection();
             ps = conn.prepareStatement(sql);
             rs = ps.executeQuery();
@@ -53,7 +53,7 @@ public class BooksDaoImpl implements BooksDao {
         Books book = null;
 
         try {
-            String sql = "SELECT * FROM books WHERE id = ?";
+            String sql = "SELECT * FROM Books WHERE BookID = ?";
             conn = JDBCUtil.getConnection();
             ps = conn.prepareStatement(sql);
             ps.setInt(1, id);
@@ -83,7 +83,7 @@ public class BooksDaoImpl implements BooksDao {
         Books book = null;
 
         try {
-            String sql = "SELECT * FROM books WHERE isbn = ?";
+            String sql = "SELECT * FROM Books WHERE ISBN = ?";
             conn = JDBCUtil.getConnection();
             ps = conn.prepareStatement(sql);
             ps.setString(1, isbn);
@@ -113,7 +113,7 @@ public class BooksDaoImpl implements BooksDao {
         List<Books> books = new ArrayList();
 
         try {
-            String sql = "SELECT * FROM books WHERE title LIKE ?";
+            String sql = "SELECT * FROM Books WHERE Title LIKE ?";
             conn = JDBCUtil.getConnection();
             ps = conn.prepareStatement(sql);
             ps.setString(1, title);
@@ -143,7 +143,7 @@ public class BooksDaoImpl implements BooksDao {
     public List<Books> getBooksByPublisher(String publisher) {
         List<Books> books = new ArrayList();
         try {
-            String sql = "SELECT * FROM books WHERE publisher LIKE ?";
+            String sql = "SELECT * FROM Books WHERE Publisher LIKE ?";
             conn = JDBCUtil.getConnection();
             ps = conn.prepareStatement(sql);
             ps.setString(1, publisher);
@@ -172,7 +172,7 @@ public class BooksDaoImpl implements BooksDao {
     public List<Books> getBooksByPublicationDate(Date date) {
         List<Books> books = new ArrayList();
         try {
-            String sql = "SELECT * FROM books WHERE publicationDate = ?";
+            String sql = "SELECT * FROM Books WHERE PublicationDate = ?";
             conn = JDBCUtil.getConnection();
             ps = conn.prepareStatement(sql);
             ps.setDate(1, date);
@@ -202,7 +202,7 @@ public class BooksDaoImpl implements BooksDao {
     public List<Books> getBooksByStatus(String status) {
         List<Books> books = new ArrayList<Books>();
         try {
-            String sql = "SELECT * FROM books WHERE status = ?";
+            String sql = "SELECT * FROM Books WHERE Status = ?";
             conn = JDBCUtil.getConnection();
             ps = conn.prepareStatement(sql);
             ps.setString(1, status);
@@ -233,7 +233,7 @@ public class BooksDaoImpl implements BooksDao {
         int result = 0;
 
         try {
-            String sql = "UPDATE books SET title = ?, author = ?, publisher = ?, publicationDate = ?, status = ? WHERE id = ?";
+            String sql = "UPDATE Books SET Title = ?, Author = ?, Publisher = ?, PublicationDate = ?, Status = ? WHERE BookID = ?";
             conn = JDBCUtil.getConnection();
             ps = conn.prepareStatement(sql);
             ps.setString(1, book.getTitle());
@@ -257,7 +257,7 @@ public class BooksDaoImpl implements BooksDao {
         int result = 0;
         try {
 
-            String sql = "INSERT INTO books (title, author, publisher, publicationDate, status) VALUES (?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO Books (Title, Author, Publisher, PublicationDate, Status) VALUES (?, ?, ?, ?, ?)";
             conn = JDBCUtil.getConnection();
             ps = conn.prepareStatement(sql);
             ps.setString(1, book.getTitle());
@@ -279,7 +279,7 @@ public class BooksDaoImpl implements BooksDao {
     public int deleteBooks(Books book) {
         int result = 0;
         try {
-            String sql = "DELETE FROM books WHERE id = ?";
+            String sql = "DELETE FROM Books WHERE BookID = ?";
             conn = JDBCUtil.getConnection();
             ps = conn.prepareStatement(sql);
             ps.setInt(1, book.getId());

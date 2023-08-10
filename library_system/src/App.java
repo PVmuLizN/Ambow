@@ -23,9 +23,10 @@ public class App {
             adminCheck = am.start();
             if (adminCheck != null)
                 break;
+            i--;
         }
+        if (i < 1) System.exit(0); // 5 次机会 退出
         StartView.mainView();
-        System.out.println("1、书籍管理操作\t2、借阅记录管理\t3、罚款管理\t4、读者信息管理\t5、预约管理\t0、退出");
 
         int choose = KeyboardUtil.readInt();
         switch (choose) {
