@@ -1,0 +1,10 @@
+# MySQL:
+- mysql  Ver 8.0.33 
+- mysql-connector-j-8.0.33
+# Java:
+- openjdk version "20.0.1" 2023-04-18
+- OpenJDK Runtime Environment Homebrew (build 20.0.1)
+# 如何运行：
+执行 `/src/App.java` 的 `main` 函数。
+
+
