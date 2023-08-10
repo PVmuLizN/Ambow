@@ -13,6 +13,9 @@ import utils.KeyboardUtil;
  * @time Tue Aug 8 11:58:07 CST 2023
  * @implNote 目前这个类中的所有增删改查方法的返回值类型与service相同，将来要改成自然语言提示（void）.
  * 
+ * @time Thu Aug 10 11:30:18 CST 2023
+ * @implNote 所有自然语言交互已在App.java 中实现
+ * 
  */
 public class BooksMain {
     private BooksService bs = null;
@@ -144,6 +147,9 @@ public class BooksMain {
      * @return
      */
     private int deleteBooks(Books book) {
+        System.out.println("请输入书籍id");
+        int id = KeyboardUtil.readInt();
+        book.setId(id);
         return bs.deleteBooks(book);
     }
 
@@ -153,8 +159,8 @@ public class BooksMain {
      * @return
      */
     private int changeBooks(Books book) {
-        System.out.println("input id");
-        int id = KeyboardUtil.readInt();
+        // System.out.println("input id");
+        // int id = KeyboardUtil.readInt();
         System.out.println("input isbn");
         String isbn = KeyboardUtil.readString();
         System.out.println("input Title");
@@ -167,7 +173,7 @@ public class BooksMain {
         Date date = KeyboardUtil.readDate();
         System.out.println("input status");
         String status = KeyboardUtil.readString();
-        book.setId(id);
+        // book.setId(id);
         book.setTitle(title);
         book.setAuthor(author);
         book.setIsbn(isbn);
@@ -183,6 +189,28 @@ public class BooksMain {
      * @return
      */
     private int addBooks(Books book) {
+        // System.out.println("input id");
+        // int id = KeyboardUtil.readInt();
+        System.out.println("input isbn");
+        String isbn = KeyboardUtil.readString();
+        System.out.println("input Title");
+        String title = KeyboardUtil.readString();
+        System.out.println("intput Author");
+        String author = KeyboardUtil.readString();
+        System.out.println("input publisher");
+        String publisher = KeyboardUtil.readString();
+        System.out.println("intput publish date");
+        Date date = KeyboardUtil.readDate();
+        System.out.println("input status");
+        String status = KeyboardUtil.readString();
+        // book.setId(id);
+        book.setTitle(title);
+        book.setAuthor(author);
+        book.setIsbn(isbn);
+        book.setPublicationDate(date);
+        book.setStatus(status);
+        book.setPublisher(publisher);
+
         return bs.addBooks(book);
     }
 
