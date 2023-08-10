@@ -1,23 +1,22 @@
 package po;
 
-public class Fines {
+import java.math.BigDecimal;
 
+/**
+ * ClassName: Fines
+ * Package: po
+ * Description: 类的描述
+ *
+ * @Author 陈星
+ * @Create 2023/8/8 11:14
+ * @Version 1.0 版本号
+ */
+public class Fines {
     private int fineID;
     private int borrowID;
-    private double amount;
+    private int amount;
     private String reason;
     private String paymentStatus;
-
-    public Fines() {
-    }
-
-    public Fines(int fineID, int borrowID, double amount, String reason, String paymentStatus) {
-        this.fineID = fineID;
-        this.borrowID = borrowID;
-        this.amount = amount;
-        this.reason = reason;
-        this.paymentStatus = paymentStatus;
-    }
 
     public int getFineID() {
         return fineID;
@@ -35,11 +34,11 @@ public class Fines {
         this.borrowID = borrowID;
     }
 
-    public double getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 

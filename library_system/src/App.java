@@ -3,6 +3,7 @@ import java.util.List;
 
 import main.AdminMain;
 import main.BooksMain;
+import main.FinesMain;
 import po.Admin;
 import po.Books;
 import service.AdminService;
@@ -39,7 +40,7 @@ public class App {
                     case 1:
                         List<Books> books = bm.queryBooks();
 
-                        if (books.size() > 0) {
+                        if (!books.isEmpty()) {
                             for (Books book : books) {
                                 System.out.println("");
                                 System.out.println(book.getId() + book.getIsbn() + book.getTitle() + book.getAuthor() +
@@ -62,7 +63,15 @@ public class App {
                 }
                 break;
 
-            case 2:
+            case 3:
+                FinesMain fm = new FinesMain();
+                fm.Fines();
+                break;
+            default:
+                System.out.println("请重新选择");
+                StartView.mainView();
+                break;
+
 
         }
 

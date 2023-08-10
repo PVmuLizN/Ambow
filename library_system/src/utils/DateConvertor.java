@@ -7,9 +7,8 @@ import java.text.SimpleDateFormat;
 public class DateConvertor {
     public static Date utilToSql(String date) {
         
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String strDate = sdf.format(date);
-        Date sqlDate = Date.valueOf(strDate);
+        
+        Date sqlDate = Date.valueOf(date);
         
         return sqlDate;
 
