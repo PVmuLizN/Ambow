@@ -13,15 +13,16 @@ import view.BooksView;
 /**
  * @time Tue Aug  8 11:58:07 CST 2023
  * @implNote 目前这个类中的所有增删改查方法的返回值类型与service相同，将来要改成自然语言提示（void）.
+ * 
  */
-public class LibraryMain {
-    private BooksService bs = null;
+public class BooksMain {
+    private BooksService bs = null;/** */
 
     /**
      * @author weihuanchun
      * @return
      */
-    private List<Books> queryBooks() {
+    public List<Books> booksOperation() {
         bs = new BooksServiceImpl();
         List<Books> booksRes = new ArrayList();
         System.out.println("1.query all books\t2.query by id\t3.query by isbn\t4.query by conditions");
@@ -39,7 +40,7 @@ public class LibraryMain {
             case 3:
                 System.out.println("input isbn");
                 String isbn = KeyboardUtil.readString();
-                booksRes.add(this.queryBooksByIsbn(isbn);
+                booksRes.add(this.queryBooksByIsbn(isbn));
                 break;
             case 4:
                 System.out.println("input title");
