@@ -1,6 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
+
 import main.AdminMain;
 import main.BooksMain;
 import po.Admin;
+import po.Books;
 import service.AdminService;
 import utils.KeyboardUtil;
 import view.StartView;
@@ -14,14 +18,49 @@ public class App {
         Admin adminCheck = null;
         int i = 5;
 
-        while (i>0) {
+        while (i > 0) {
             System.out.println("您还有" + i + "次机会");
             adminCheck = am.start();
-            if (adminCheck!=null) break;
+            if (adminCheck != null)
+                break;
         }
         StartView.mainView();
-        int choose = KeyboardUtil.readInt();
+        System.out.println("1、书籍管理操作\t2、借阅记录管理\t3、罚款管理\t4、读者信息管理\t5、预约管理\t0、退出");
 
+        int choose = KeyboardUtil.readInt();
+        switch (choose) {
+
+            case 1:
+                bm = new BooksMain();
+                System.out.println("1.图书查询\t2.图书修改");
+                int choice = KeyboardUtil.readInt();
+                switch (choice) {
+                    case 1:
+                        List<Books> books = bm.queryBooks();
+
+                        if (books.size() > 0) {
+                            for (Books book : books) {
+                                System.out.println("");
+                                System.out.println(book.getId() + book.getIsbn() + book.getTitle() + book.getAuthor() +
+                                        book.getPublisher() + book.getPublicationDate() + book.getStatus());
+                            }
+                        } else {
+                            System.out.println("没有找到书籍");
+                        }
+                    case 2:
+                        Books book = new Books();
+                        int res = bm.modifyBooks(book);
+                        if (res != 0) {
+                            System.out.println("修改成功！");
+                        } else {
+                            System.out.println("修改失败");
+                        }
+
+                }
+
+            case 2:
+
+        }
 
     }
 

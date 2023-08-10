@@ -10,19 +10,22 @@ import service.BooksService;
 import service.service_impl.BooksServiceImpl;
 import utils.KeyboardUtil;
 import view.StartView;
+
 /**
- * @time Tue Aug  8 11:58:07 CST 2023
+ * @time Tue Aug 8 11:58:07 CST 2023
  * @implNote 目前这个类中的所有增删改查方法的返回值类型与service相同，将来要改成自然语言提示（void）.
  * 
  */
 public class BooksMain {
-    private BooksService bs = null;/** */
+    private BooksService bs = null;
+
+    /** */
 
     /**
      * @author weihuanchun
      * @return
      */
-    public List<Books> booksOperation() {
+    public List<Books> queryBooks() {
         bs = new BooksServiceImpl();
         List<Books> booksRes = new ArrayList();
         System.out.println("1.query all books\t2.query by id\t3.query by isbn\t4.query by conditions");
@@ -53,7 +56,7 @@ public class BooksMain {
                 String status = KeyboardUtil.readString();
                 List<Books> booksByTitle = this.queryBooksByTitle(title);
                 List<Books> booksByPublisher = this.queryBooksByPublisher(publisher);
-                List<Books> booksByDate= this.queryBooksByPublicationDate(date);
+                List<Books> booksByDate = this.queryBooksByPublicationDate(date);
                 List<Books> booksByStatus = this.queryBooksByStatus(status);
 
                 booksRes = getIntersection(booksByTitle, booksByPublisher, booksByDate, booksByStatus);
@@ -63,6 +66,22 @@ public class BooksMain {
         }
         return booksRes;
 
+    }
+
+    public int modifyBooks(Books book) {
+        int res = 0;
+        bs = new BooksServiceImpl();
+        System.out.println("1.修改书籍\t2.添加书籍\t3.删除书籍");
+        int choose = KeyboardUtil.readInt();
+        switch (choose) {
+            case 1:
+                res = this.changeBooks(book);
+            case 2:
+                res = this.addBooks(book);
+            case 3:
+                res = this.deleteBooks(book);
+        }
+        return res;
     }
 
     /**
@@ -119,6 +138,54 @@ public class BooksMain {
      */
     private List<Books> queryBooksByStatus(String status) {
         return bs.queryBooksByStatus(status);
+    }
+
+    /**
+     * 
+     * @param book
+     * @return
+     */
+    private int deleteBooks(Books book) {
+        return bs.deleteBooks(book);
+    }
+
+    /**
+     * 
+     * @param book
+     * @return
+     */
+    private int changeBooks(Books book) {
+        System.out.println("input id");
+        int id = KeyboardUtil.readInt();
+        System.out.println("input isbn");
+        String isbn = KeyboardUtil.readString();
+        System.out.println("input Title");
+        String title = KeyboardUtil.readString();
+        System.out.println("intput Author");
+        String author = KeyboardUtil.readString();
+        System.out.println("input publisher");
+        String publisher = KeyboardUtil.readString();
+        System.out.println("intput publish date");
+        Date date = KeyboardUtil.readDate();
+        System.out.println("input status");
+        String status = KeyboardUtil.readString();
+        book.setId(id);
+        book.setTitle(title);
+        book.setAuthor(author);
+        book.setIsbn(isbn);
+        book.setPublicationDate(date);
+        book.setStatus(status);
+        book.setPublisher(publisher);
+        return bs.changeBooks(book);
+    }
+
+    /**
+     * 
+     * @param book
+     * @return
+     */
+    private int addBooks(Books book) {
+        return bs.addBooks(book);
     }
 
     /**
