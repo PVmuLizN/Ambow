@@ -15,7 +15,9 @@ public class KeyboardUtil {
 
     // a static method to read an integer from the keyboard
     public static int readInt() {
-        return scanner.nextInt();
+        int value = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+        return value;
     }
 
     // a static method to read a string from the keyboard
