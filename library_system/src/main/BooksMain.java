@@ -227,7 +227,7 @@ public class BooksMain {
 
     /**
      * @author weihuanchun
-     * @purpose 取交集
+     * @purpose 取并集
      * @return
      */
     private static List<Books> sumBooks(List<Books> booksByTitle,
