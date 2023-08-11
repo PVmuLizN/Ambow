@@ -52,16 +52,18 @@ public class BooksMain {
                 String title = KeyboardUtil.readString();
                 System.out.println("input publisher");
                 String publisher = KeyboardUtil.readString();
-                System.out.println("input publish date");
-                Date date = KeyboardUtil.readDate();
+                // System.out.println("input publish date");
+                // Date date = KeyboardUtil.readDate();
                 System.out.println("input status");
                 String status = KeyboardUtil.readString();
-                List<Books> booksByTitle = this.queryBooksByTitle(title);
-                List<Books> booksByPublisher = this.queryBooksByPublisher(publisher);
-                List<Books> booksByDate = this.queryBooksByPublicationDate(date);
-                List<Books> booksByStatus = this.queryBooksByStatus(status);
+                List<Books> booksByTitle = title.equals("") ? this.queryAllBooks() : this.queryBooksByTitle(title);
+                List<Books> booksByPublisher = publisher.equals("") ? this.queryAllBooks()
+                        : this.queryBooksByPublisher(publisher);
+                // List<Books> booksByDate = date.equals("") ? this.queryAllBooks()
+                // : this.queryBooksByPublicationDate(date);
+                List<Books> booksByStatus = status.equals("") ? this.queryAllBooks() : this.queryBooksByStatus(status);
 
-                booksRes = getIntersection(booksByTitle, booksByPublisher, booksByDate, booksByStatus);
+                booksRes = getIntersection(booksByTitle, booksByPublisher, booksByStatus);
                 break;
             default:
                 System.out.println("Something went wrong!!!");
@@ -225,11 +227,11 @@ public class BooksMain {
      * @return
      */
     private static ArrayList<Books> getIntersection(List<Books> booksByTitle, List<Books> booksByPublisher,
-            List<Books> booksByDate, List<Books> booksByStatus) {
+            List<Books> booksByStatus) {
         ArrayList<Books> intersection = new ArrayList<>();
         for (int i = 0; i < booksByTitle.size(); i++) {
             Books element = booksByTitle.get(i);
-            if (booksByPublisher.contains(element) && booksByDate.contains(element)
+            if (booksByPublisher.contains(element)
                     && booksByStatus.contains(element)) {
                 intersection.add(element);
             }
