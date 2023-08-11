@@ -65,12 +65,9 @@ public class BooksMain {
 
                 booksRes.addAll(sumBooks(booksByTitle, booksByPublisher, booksByStatus));
                 break;
-            case 11:
-                String title0 = KeyboardUtil.readString();
-                booksRes.addAll(this.queryBooksByTitle(title0));
-                break;
             default:
                 System.out.println("Something went wrong!!!");
+                break;
 
         }
         return booksRes;
