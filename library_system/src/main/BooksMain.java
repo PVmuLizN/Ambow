@@ -20,8 +20,6 @@ import utils.KeyboardUtil;
 public class BooksMain {
     private BooksService bs = null;
 
-    
-
     /**
      * @author weihuanchun
      * @return
