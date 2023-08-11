@@ -47,10 +47,16 @@ public class App {
 
                             if (!books.isEmpty()) {
                                 for (Books book : books) {
-                                    System.out.println("");
-                                    System.out.println(
-                                            book.getId() + book.getIsbn() + book.getTitle() + book.getAuthor() +
-                                                    book.getPublisher() + book.getPublicationDate() + book.getStatus());
+                                    if (book == null) {
+                                        System.out.println("没有找到书籍");
+                                    } else {
+                                        System.out.println("");
+                                        System.out.println(
+                                                book.getId() + book.getIsbn() + book.getTitle() + book.getAuthor() +
+                                                        book.getPublisher() + book.getPublicationDate()
+                                                        + book.getStatus());
+                                    }
+
                                 }
                             } else {
                                 System.out.println("没有找到书籍");
