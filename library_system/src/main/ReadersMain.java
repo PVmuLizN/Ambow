@@ -94,6 +94,7 @@ public class ReadersMain {
 
 
     public void updateReaders(){
+        this.queryReaders();
         System.out.println("请输入要更改的读者编号：");
         int readersid = KeyboardUtil.readInt();
         System.out.println("请输入更改的读者姓名：");
