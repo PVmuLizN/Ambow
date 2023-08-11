@@ -52,9 +52,10 @@ public class App {
                                     } else {
                                         System.out.println("");
                                         System.out.println(
-                                                book.getId() + book.getIsbn() + book.getTitle() + book.getAuthor() +
-                                                        book.getPublisher() + book.getPublicationDate()
-                                                        + book.getStatus());
+                                                book.getId() + ", " + book.getIsbn() + ", " + book.getTitle() + ", "
+                                                        + book.getAuthor() + ", " +
+                                                        book.getPublisher() + ", " + book.getPublicationDate()
+                                                        + ", " + book.getStatus());
                                     }
 
                                 }

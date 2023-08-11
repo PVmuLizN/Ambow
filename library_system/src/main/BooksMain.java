@@ -33,7 +33,6 @@ public class BooksMain {
         int choice = KeyboardUtil.readInt();
         switch (choice) {
             case 1:
-                // this.queryAllBooks();
                 booksRes.addAll(this.queryAllBooks());
                 break;
             case 2:
@@ -48,6 +47,7 @@ public class BooksMain {
                 booksRes.add(this.queryBooksByIsbn(isbn));
                 break;
             case 4:
+                List<Books> allBooks = this.queryAllBooks();
                 System.out.println("input title");
                 String title = KeyboardUtil.readString();
                 System.out.println("input publisher");
@@ -56,14 +56,18 @@ public class BooksMain {
                 // Date date = KeyboardUtil.readDate();
                 System.out.println("input status");
                 String status = KeyboardUtil.readString();
-                List<Books> booksByTitle = title.equals("") ? this.queryAllBooks() : this.queryBooksByTitle(title);
-                List<Books> booksByPublisher = publisher.equals("") ? this.queryAllBooks()
+                List<Books> booksByTitle = title.equals("") ? null : this.queryBooksByTitle(title);
+                List<Books> booksByPublisher = publisher.equals("") ? null
                         : this.queryBooksByPublisher(publisher);
                 // List<Books> booksByDate = date.equals("") ? this.queryAllBooks()
                 // : this.queryBooksByPublicationDate(date);
-                List<Books> booksByStatus = status.equals("") ? this.queryAllBooks() : this.queryBooksByStatus(status);
+                List<Books> booksByStatus = status.equals("") ? null : this.queryBooksByStatus(status);
 
-                booksRes = getIntersection(booksByTitle, booksByPublisher, booksByStatus);
+                booksRes.addAll(sumBooks(booksByTitle, booksByPublisher, booksByStatus));
+                break;
+            case 11:
+                String title0 = KeyboardUtil.readString();
+                booksRes.addAll(this.queryBooksByTitle(title0));
                 break;
             default:
                 System.out.println("Something went wrong!!!");
@@ -226,17 +230,17 @@ public class BooksMain {
      * @purpose 取交集
      * @return
      */
-    private static ArrayList<Books> getIntersection(List<Books> booksByTitle, List<Books> booksByPublisher,
+    private static List<Books> sumBooks(List<Books> booksByTitle,
+            List<Books> booksByPublisher,
             List<Books> booksByStatus) {
-        ArrayList<Books> intersection = new ArrayList<>();
-        for (int i = 0; i < booksByTitle.size(); i++) {
-            Books element = booksByTitle.get(i);
-            if (booksByPublisher.contains(element)
-                    && booksByStatus.contains(element)) {
-                intersection.add(element);
-            }
-        }
-        return intersection;
+        List<Books> sumRes = new ArrayList();
+        if (booksByTitle != null)
+            sumRes.addAll(booksByTitle);
+        if (booksByPublisher != null)
+            sumRes.addAll(booksByPublisher);
+        if (booksByStatus != null)
+            sumRes.addAll(booksByStatus);
+        return sumRes;
     }
 
 }
