@@ -27,7 +27,7 @@ public class BooksMain {
     public List<Books> queryBooks() {
         bs = new BooksServiceImpl();
         List<Books> booksRes = new ArrayList();
-        System.out.println("1.query all books\t2.query by id\t3.query by isbn\t4.query by conditions");
+        System.out.println("1.查询所有书籍\t2.按照id查询\t3.按照ISBN查询\t4.多项条件查询");
         int choice = KeyboardUtil.readInt();
         switch (choice) {
             case 1:
