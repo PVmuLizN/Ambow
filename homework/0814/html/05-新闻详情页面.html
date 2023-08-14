@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /*div水平排列*/
+
+            .mid {
+                width: 60%;
+                border: 0 solid red;
+                float: left;
+            }
+            .left,
+            .right {
+                width: 20%;
+                border: 0 solid red;
+                float: left;
+            }
+            .footer {
+                position: fixed;
+                clear: both;
+                background-color: black;
+                bottom: 0;
+                width: 100%;
+                color: white;
+                text-align: center;
+            }
+            .footer a {
+                text-decoration: none;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 注册 -->
+        <div>
+            <img
+                title="京东官网"
+                src="img/jd.jpg"
+                alt="京东logo"
+                width="100%"
+            />
+            <a href="https://www.jd.com" title="jingdong">jd</a>
+            <a
+                href="http://www.jd.com"
+                target="_blank"
+                style="text-decoration: none"
+                >jd blank</a
+            >
+        </div>
+        <!-- 导航 -->
+        <div>
+            <img src="img/daohang" alt="" width="100%" />
+        </div>
+        <!-- 左  中  右 -->
+        <div class="left">left</div>
+        <div class="mid">
+            <!-- 主题 -->
+            <div>
+                <h1></h1>
+            </div>
+            <!-- 发布时间 -->
+            <div>
+                <em>发布时间</em>
+                <hr />
+            </div>
+            <!-- 副标题 -->
+            <div>
+                <h4>副标题</h4>
+            </div>
+            <!-- 内容 -->
+            <div>
+                <p>第一段</p>
+                <p>第二段</p>
+                <ol>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ol>
+                <p><strong>一</strong></p>
+                <p><strong>二</strong></p>
+                <p><strong>三</strong></p>
+                <p>结语</p>
+            </div>
+        </div>
+        <div class="right">right</div>
+        <!-- 尾部 -->
+        <div class="footer">
+            <img src="" alt="" width="100%" />
+        </div>
+        <!-- 使用到文本图片超链接 -->
+    </body>
+</html>
