@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>注册表单</title>
-</head>
-<body>
-    <div>
-        <form action="/register" method="post">
-            用户名:<input type="text" name="uname" id=""><br>
-            密码:<input type="password" name="passwd" id=""><br>
-            再次输入密码:<input type="password" name="repasswd" id=""><br>
-            电话号码:<input type="tel" name="phonenum" id=""><br>
-            验证码:<input type="text" name="vecode" id=""><br>
-            手机验证码:<input type="number" name="vephone" id=""><br>
-            <input type="checkbox" value="read" >已阅读<a href="#">协议</a><br>
-            <input type="submit" value="Submit">
-            <button onclick="reset()">重置</button>
-        </form>
-    </div>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>注册表单</title>
+    </head>
+    <body>
+        <div>
+            <form action="/register" method="post">
+                用户名:<input type="text" name="uname" id="" /><br />
+                密码:<input type="password" name="passwd" id="" /><br />
+                再次输入密码:<input
+                    type="password"
+                    name="repasswd"
+                    id=""
+                /><br />
+                电话号码:<input type="tel" name="phonenum" id="" /><br />
+                验证码:<input type="text" name="vecode" id="" /><br />
+                手机验证码:<input type="text" name="vephone" id="" /><br />
+                <input type="checkbox" value="read" />已阅读<a href="#">协议</a
+                ><br />
+                <input type="submit" value="Submit" />
+                <button onclick="reset()">重置</button>
+            </form>
+        </div>
+    </body>
 </html>
