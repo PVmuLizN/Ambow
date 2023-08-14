@@ -31,6 +31,7 @@
 -   name 可重复
 -   `input`
     > `<input type="text" name="" value="">`
+- `anchor`
 
 ### 特殊字符
 
