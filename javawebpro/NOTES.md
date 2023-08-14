@@ -7,6 +7,13 @@
 -   行标签
 -   块标签
 -   `div`
+-   `ol`: order
+-   `ul`: unordered list
+    > `<ul type="circle">` (this is deprecated)
+-   `li`: in ordered list or unordered list
+-   `em`
+-   `strong`
+-
 
 ### 属性
 
@@ -22,15 +29,19 @@
 
 ### `style` 控制
 
-- 属性之间分号
-- 属性与值之间`:`
+-   属性之间分号
+-   属性与值之间`:`
 -   `style` in `head`
 -   `border`: 边框
     > `border: 1px, solid, black;`
-- `width`
-    >`width: 500px;`
-- `height`
+-   `width`
+    > `width: 500px;`  
+    > 推荐使用百分比：`width: 60%`;
+-   `height`
     > `height: 600px;`
-- `margin` : 外边距
-    > `margin: auto 0;`
-    
+-   `margin` : 外边距
+    > `margin: auto 0;`  
+    > from border of content to the border of browser  
+    > `margin: 10 , 20 ,30 ,40;`: 上，右， 下， 左  
+    > `margin: 0 auto;` 上， 右。 上：0. 左右：auto  
+    > `margin: 10;` 上下是 10
