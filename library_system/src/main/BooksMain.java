@@ -165,8 +165,8 @@ public class BooksMain {
      * @return
      */
     private int changeBooks(Books book) {
-        // System.out.println("input id");
-        // int id = KeyboardUtil.readInt();
+        System.out.println("input id");
+        int id = KeyboardUtil.readInt();
         System.out.println("input isbn");
         String isbn = KeyboardUtil.readString();
         System.out.println("input Title");
@@ -179,7 +179,7 @@ public class BooksMain {
         Date date = KeyboardUtil.readDate();
         System.out.println("input status");
         String status = KeyboardUtil.readString();
-        // book.setId(id);
+        book.setId(id);
         book.setTitle(title);
         book.setAuthor(author);
         book.setIsbn(isbn);
