@@ -202,3 +202,56 @@ Sure, here is a list of all the values of CSS selectors:
 -   `*`
 
 I hope this is helpful! Let me know if you have any other questions.
+
+## 优先级
+
+Sure, here are the details of the priorities of CSS selectors:
+
+-   **ID selectors** have the highest priority. This is because ID selectors are unique to each element. For example, the selector `#my-id` will only match the element with the ID `my-id`.
+-   **Class selectors** have a lower priority than ID selectors. This is because class selectors can be applied to multiple elements. For example, the selector `.my-class` can be applied to any element with the class `my-class`.
+-   **Type selectors** have a lower priority than class selectors. This is because type selectors match all elements of a particular type. For example, the selector `h1` will match all `h1` elements.
+-   **Attribute selectors** have a lower priority than type selectors. This is because attribute selectors match elements that have a specific attribute. For example, the selector `[href]` will match all elements with an `href` attribute.
+-   **Pseudo-class selectors** have a lower priority than attribute selectors. This is because pseudo-class selectors match elements based on their state or condition. For example, the selector `:hover` will match elements when the mouse is hovering over them.
+-   **Pseudo-element selectors** have the lowest priority. This is because pseudo-element selectors match parts of elements. For example, the selector `::after` will match the content after an element.
+
+The number of times a selector appears in a style sheet also affects its priority. If a selector appears multiple times in a style sheet, the priority will be increased each time it appears. For example, the following CSS will style the element with the ID `my-id` red:
+
+```css
+#my-id {
+    color: red;
+}
+
+#my-id {
+    color: blue;
+}
+```
+
+The `#my-id` selector will have a priority of 2 because it appears twice in the style sheet. This means that the second declaration, which sets the color to blue, will be ignored.
+
+The order of the selectors in a style sheet also affects their priority. Selectors that appear earlier in a style sheet have a higher priority than selectors that appear later. For example, the following CSS will style the element with the ID `my-id` red:
+
+```css
+.my-class {
+    color: blue;
+}
+
+#my-id {
+    color: red;
+}
+```
+
+The `#my-id` selector will have a higher priority than the `.my-class` selector because it appears earlier in the style sheet. This means that the element with the ID `my-id` will be styled red, even though the `.my-class` selector also specifies a color of blue.
+
+The `!important` rule overrides the default priority of a selector. This means that the `!important` rule will always be used, regardless of the order or number of times it appears in a style sheet. For example, the following CSS will style the element with the ID `my-id` blue, even though the `.my-class` selector specifies a color of red:
+
+```css
+#my-id {
+    color: red !important;
+}
+
+.my-class {
+    color: blue;
+}
+```
+
+I hope this helps! Let me know if you have any other questions.
