@@ -46,6 +46,8 @@
         <option></option>
     </select>
     ```
+- table
+    - 合并列
 
 ## 属性
 
@@ -255,23 +257,43 @@ The `!important` rule overrides the default priority of a selector. This means t
 ```
 
 I hope this helps! Let me know if you have any other questions.
+
 ## Attributes
+
 ### border
-[1]: https://developer.mozilla.org/en-US/docs/Web/CSS/border ""
-[2]: https://www.w3schools.com/cssref/pr_border.php ""
-[3]: https://www.geeksforgeeks.org/css-border-property/ ""
-[4]: https://www.w3schools.com/css/css_border.asp ""
+
+[1]: https://developer.mozilla.org/en-US/docs/Web/CSS/border
+[2]: https://www.w3schools.com/cssref/pr_border.php
+[3]: https://www.geeksforgeeks.org/css-border-property/
+[4]: https://www.w3schools.com/css/css_border.asp
 
 There are three main border attributes in CSS: border-width, border-style, and border-color. Each of these attributes can have different values that affect the appearance of the border. Here is a list of the possible values for each attribute:
 
-- **border-width**: This attribute specifies the thickness of the border. It can be a fixed value (such as 5px, 1em, etc.), a keyword (such as thin, medium, or thick), or a global value (such as inherit, initial, or unset). The default value is medium[^1^][1].
-- **border-style**: This attribute specifies the style of the border. It can be one of the following values: none (no border), hidden (same as none, but also prevents conflicts with other borders), dotted (a series of dots), dashed (a series of dashes), solid (a single line), double (two parallel lines), groove (a 3D groove effect), ridge (a 3D ridge effect), inset (a 3D inset effect), outset (a 3D outset effect), or a global value. The default value is none[^1^][1].
-- **border-color**: This attribute specifies the color of the border. It can be a color name (such as red, blue, etc.), a hexadecimal value (such as #ff0000, #00ff00, etc.), an RGB value (such as rgb(255,0,0), rgb(0,255,0), etc.), an RGBA value (such as rgba(255,0,0,0.5), rgba(0,255,0,0.5), etc.), an HSL value (such as hsl(0,100%,50%), hsl(120,100%,50%), etc.), an HSLA value (such as hsla(0,100%,50%,0.5), hsla(120,100%,50%,0.5), etc.), a currentColor value (the same color as the text), or a global value. The default value is currentColor[^1^][1].
+-   **border-width**: This attribute specifies the thickness of the border. It can be a fixed value (such as 5px, 1em, etc.), a keyword (such as thin, medium, or thick), or a global value (such as inherit, initial, or unset). The default value is medium[^1^][1].
+-   **border-style**: This attribute specifies the style of the border. It can be one of the following values: none (no border), hidden (same as none, but also prevents conflicts with other borders), dotted (a series of dots), dashed (a series of dashes), solid (a single line), double (two parallel lines), groove (a 3D groove effect), ridge (a 3D ridge effect), inset (a 3D inset effect), outset (a 3D outset effect), or a global value. The default value is none[^1^][1].
+-   **border-color**: This attribute specifies the color of the border. It can be a color name (such as red, blue, etc.), a hexadecimal value (such as #ff0000, #00ff00, etc.), an RGB value (such as rgb(255,0,0), rgb(0,255,0), etc.), an RGBA value (such as rgba(255,0,0,0.5), rgba(0,255,0,0.5), etc.), an HSL value (such as hsl(0,100%,50%), hsl(120,100%,50%), etc.), an HSLA value (such as hsla(0,100%,50%,0.5), hsla(120,100%,50%,0.5), etc.), a currentColor value (the same color as the text), or a global value. The default value is currentColor[^1^][1].
 
 You can use the border shorthand property to set all three attributes at once. For example, `border: 5px solid red` will create a 5-pixel thick solid red border around the element[^2^][2]. You can also use the individual properties to set different values for each side of the element. For example, `border-top: 3px dashed green` will create a 3-pixel thick dashed green border on the top side of the element[^2^][2].
 
 I hope this helps you understand the CSS border properties better. If you want to learn more about them or see some examples, you can check out these links:
 
-- [border - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
-- [CSS Borders - W3Schools](https://www.w3schools.com/css/css_border.asp)
-- [CSS border property - GeeksforGeeks](https://www.geeksforgeeks.org/css-border-property/)
+-   [border - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
+-   [CSS Borders - W3Schools](https://www.w3schools.com/css/css_border.asp)
+-   [CSS border property - GeeksforGeeks](https://www.geeksforgeeks.org/css-border-property/)
+
+### align
+
+[1]: https://www.w3schools.com/csS/css_align.asp
+[2]: https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+[3]: https://www.geeksforgeeks.org/html-align-attribute/
+[4]: https://www.geeksforgeeks.org/html-img-align-attribute/
+
+There are several CSS properties that are related to the alignment of elements, such as text, images, flex items, grid items, etc. Some of the most common ones are:
+
+-   **text-align**: This property specifies the horizontal alignment of the text within a block element or a table cell. It can take values such as `left`, `right`, `center`, `justify`, and `inherit`[^1^][1].
+-   **vertical-align**: This property specifies the vertical alignment of an inline or table-cell element. It can take values such as `baseline`, `top`, `middle`, `bottom`, `sub`, `super`, and `inherit`[^2^][2].
+-   **align-items**: This property specifies the default alignment for items inside a flex container or a grid container. It can take values such as `normal`, `stretch`, `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, and `baseline`[^3^][3].
+-   **align-self**: This property overrides the align-items value for a specific flex item or grid item. It can take the same values as align-items, plus a value of `auto`[^4^][4].
+-   **align-content**: This property aligns a flex container's lines within the flex container when there is extra space on the cross-axis. It can take values such as `normal`, `stretch`, `center`, `start`, `end`, `flex-start`, `flex-end`, and `space-between`.
+
+These are some of the most commonly used CSS properties for alignment, but there are more that you can explore in the [CSS reference]. I hope this helps you with your web development project. 😊
