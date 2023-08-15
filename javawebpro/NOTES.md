@@ -1,8 +1,8 @@
-# Mon Aug 14 09:31:09 CST 2023
+**Mon Aug 14 09:31:09 CST 2023**
 
-## HTML
+# HTML
 
-### 标签
+## 标签
 
 -   行标签
 -   块标签
@@ -24,21 +24,74 @@
         > `target` where to open the link , here is in a blank window
     -   `style=text-decoration: none`:
         > 去除下划线
+-   `<form></form>`
+    -   action:url address
+    -   method
+        -   get
+            > 通过浏览器地址发送信息到服务器,不能超出 1k，而且不能是重要数据
+            > `key1=value1&key2=value2`
+        -   post
+            > 通过请求体发送信息到服务器
+    -   autocomplete:
+        > 是否缓存到浏览器内，默认保存
+    -   `<label></label>`
+-   `<input>`
+    -   type=
+        > text, submit,
+-   select : 下拉框
+    ```html
+    <select>
+        <option></option>
+        <option></option>
+        <option></option>
+    </select>
+    ```
 
-### 属性
+## 属性
 
 -   id 不可重复
 -   name 可重复
 -   `input`
     > `<input type="text" name="" value="">`
-- `anchor`
+-   `anchor`
+-   `placeholder`
+    > 提示信息，hover the mouse on the element
+-   input attributes:
+    > Here is a table of input type values for HTML:
+    >
+    > | Input Type     | Description                                                                   |
+    > | -------------- | ----------------------------------------------------------------------------- |
+    > | button         | A button that can be used to submit a form or perform an action.              |
+    > | checkbox       | A checkbox that can be used to select one or more options.                    |
+    > | color          | A control for specifying a color.                                             |
+    > | date           | A control for entering a date.                                                |
+    > | datetime-local | A control for entering a date and time.                                       |
+    > | email          | A control for entering an email address.                                      |
+    > | file           | A control for uploading a file.                                               |
+    > | hidden         | A hidden input field that is not visible to the user.                         |
+    > | image          | An image that can be used as a submit button.                                 |
+    > | month          | A control for entering a month.                                               |
+    > | number         | A control for entering a number.                                              |
+    > | password       | A password field that hides the entered text.                                 |
+    > | radio          | A radio button that can be used to select one option from a group of options. |
+    > | range          | A control for entering a value within a specified range.                      |
+    > | reset          | A button that resets the form to its initial state.                           |
+    > | search         | A text field that is used for searching.                                      |
+    > | submit         | A button that submits the form.                                               |
+    > | tel            | A control for entering a telephone number.                                    |
+    > | text           | A single-line text field.                                                     |
+    > | time           | A control for entering a time.                                                |
+    > | url            | A control for entering a URL address.                                         |
+    > | week           | A control for entering a week.                                                |
+    >
+    > I hope this is helpful! Let me know if you have any other questions.
 
-### 特殊字符
+## 特殊字符
 
 `>`,`<` 等
 ![特殊字符](img/网页特殊符号HTML代码大全-阿里云开发者社区.png)
 
-### `style` 控制
+## `style` 控制
 
 -   属性之间分号
 -   属性与值之间`:`
@@ -62,10 +115,33 @@
 -   `text-decoration: none`
     > 无下划线
 
-### 术语
+## 术语
 
 -   标准流
 -   浮动
     > `float: left;`: 从浏览器左边开始排列。脱离原标准流，按新标准排列  
     > `left`, `right`
 -   相对路径与绝对路径
+-   状态保持
+    > The hidden input type is used to store data that is not visible to the user. This data can be used to maintain the status of a form, such as the current page number or the selected filter options.
+    >
+    > For example, you could use a hidden input field to store the current page number of a paginated list. When the user clicks on the next or previous page button, the value of the hidden input field is updated to the new page number. This allows the form to keep track of the user's current position in the list, even if they refresh the page or navigate away from the form.
+    >
+    > Another example of using the hidden input type to maintain status is to store the selected filter options in a form. When the user changes the filter options, the values of the hidden input fields are updated to reflect the new selections. This allows the form to re-populate the list with the filtered results, even if the user refreshes the page or navigates away from the form.
+    >
+    > The hidden input type is a powerful tool for maintaining the status of a form. By storing data that is not visible to the user, you can ensure that the form retains its state even when the user interacts with it.
+    >
+    > Here is an example of how to use the hidden input type to maintain status:
+    >
+    > ```html
+    > <form action="/search" method="get">
+    >     <input type="hidden" name="page" value="1" />
+    >     <input type="hidden" name="filter" value="all" />
+    >     <input type="text" name="query" placeholder="Search" />
+    >     <input type="submit" value="Search" />
+    > </form>
+    > ```
+    >
+    > In this example, the hidden input fields `page` and `filter` are used to store the current page number and the selected filter options. When the user clicks on the submit button, the values of these hidden input fields are included in the form data that is submitted to the server. This allows the server to re-populate the list with the filtered results, even if the user refreshes the page or navigates away from the form.
+
+# CSS
