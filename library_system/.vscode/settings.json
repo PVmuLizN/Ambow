@@ -3,23 +3,6 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        // "~/.jars/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar"
-    ],
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
-            "name": "library_system",
-            "group": "ambow",
-            "database": "library",
-            "username": "root",
-            "password": ""
-        }
     ]
+    
 }

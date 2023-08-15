@@ -145,5 +145,60 @@
     > In this example, the hidden input fields `page` and `filter` are used to store the current page number and the selected filter options. When the user clicks on the submit button, the values of these hidden input fields are included in the form data that is submitted to the server. This allows the server to re-populate the list with the filtered results, even if the user refreshes the page or navigates away from the form.
 
 # CSS
+
 ## 外部样式
+
 ## 内联
+
+## 选择器
+
+Sure, here is a list of all the values of CSS selectors:
+
+**Simple selectors**
+
+-   **Element selectors**
+    -   `h1`
+    -   `p`
+    -   `a`
+-   **Class selectors**
+    -   `.my-class`
+    -   `.class1.class2`
+-   **Id selectors**
+    -   `#my-id`
+
+**Attribute selectors**
+
+-   `[attribute]`
+    -   `[href]`
+    -   `[class="my-class"]`
+    -   `[title~="flower"]`
+
+**Pseudo-class selectors**
+
+-   `:hover`
+    -   `:focus`
+    -   `:visited`
+    -   `:enabled`
+    -   `:disabled`
+
+**Pseudo-element selectors**
+
+-   `::before`
+    -   `::after`
+
+**Combined selectors**
+
+-   `.my-class #my-id`
+-   `h1 + p`
+-   `h1 ~ p`
+
+**Combinators**
+
+-   `>`
+-   `+`
+-   `~`
+-   `^`
+-   `$`
+-   `*`
+
+I hope this is helpful! Let me know if you have any other questions.
