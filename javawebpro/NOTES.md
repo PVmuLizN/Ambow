@@ -46,8 +46,8 @@
         <option></option>
     </select>
     ```
-- table
-    - 合并列
+-   table
+    -   合并列
 
 ## 属性
 
@@ -297,3 +297,21 @@ There are several CSS properties that are related to the alignment of elements, 
 -   **align-content**: This property aligns a flex container's lines within the flex container when there is extra space on the cross-axis. It can take values such as `normal`, `stretch`, `center`, `start`, `end`, `flex-start`, `flex-end`, and `space-between`.
 
 These are some of the most commonly used CSS properties for alignment, but there are more that you can explore in the [CSS reference]. I hope this helps you with your web development project. 😊
+
+# javascript
+
+## 历史
+
+网景
+ECMA 规范
+
+## 运行
+
+-   无编译
+-   由浏览器内的 javascript 引擎执行
+
+## 规范
+
+-   ECMAScript
+-   DOM: Document Object Model
+-   BOM: Browser Object Model
