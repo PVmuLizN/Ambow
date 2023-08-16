@@ -315,3 +315,178 @@ ECMA 规范
 -   ECMAScript
 -   DOM: Document Object Model
 -   BOM: Browser Object Model
+
+## 声明变量
+
+变量有数据类型， 取决于它的值
+
+-   `var`
+-   `let`
+
+## Constant Variables
+
+use `const` to declare
+
+## data types
+
+**from bing:**  
+[1]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures ""
+[2]: https://www.w3schools.com/js/js_datatypes.asp ""
+[3]: https://www.scaler.com/topics/javascript/data-types-in-javascript/ ""
+[4]: https://www.w3docs.com/learn-javascript/javascript-data-types.html ""
+[5]: https://www.tutorialrepublic.com/javascript-tutorial/javascript-data-types.php ""
+
+JavaScript has eight data types, which can be divided into two categories: primitive and object. Primitive data types are immutable values that are stored directly in the variable, while object data types are references to objects that are stored in the memory heap. Here is a list of all JavaScript data types:
+
+-   **String**: A sequence of characters enclosed by single or double quotes. For example, `"Hello"` or `'World'`.
+-   **Number**: A numeric value that can be an integer or a decimal. For example, `42` or `3.14`. JavaScript uses the IEEE 754 standard to represent numbers, which means it can only store numbers up to 2^53 - 1 and down to -2^53 + 1. Numbers beyond this range are represented by the special values `Infinity` and `-Infinity`.
+-   **BigInt**: A numeric value that can represent arbitrarily large integers. For example, `9007199254740991n` or `-9007199254740991n`. BigInts are created by appending `n` to the end of an integer literal or by using the `BigInt()` constructor. BigInts can only be used with other BigInts and cannot be mixed with Numbers.
+-   **Boolean**: A logical value that can be either `true` or `false`. For example, `true` or `false`.
+-   **Undefined**: A special value that indicates the absence of a value. For example, `undefined`. Undefined is the default value of any variable that has not been assigned a value or any property that does not exist in an object.
+-   **Null**: A special value that indicates the absence of an object. For example, `null`. Null is often used to represent a deliberate non-value or an empty state.
+-   **Symbol**: A unique and immutable value that can be used as a key for object properties. For example, `Symbol("foo")` or `Symbol.for("bar")`. Symbols are created by using the `Symbol()` constructor or by using the `Symbol.for()` method to access a global symbol registry. Symbols are not enumerable and cannot be converted to strings implicitly.
+-   **Object**: A collection of properties that can store any type of values. For example, `{name: "Alice", age: 25}` or `[1, 2, 3]`. Objects are created by using the `Object()` constructor, object literals, or other built-in constructors such as `Array()`, `Date()`, or `Function()`. Objects can have methods, which are functions that belong to the object.
+
+You can learn more about JavaScript data types from these sources[^1^][1] [^2^][2] [^3^][3] [^4^][4] [^5^][5]. I hope this helps you understand JavaScript better. 😊
+
+## 运算符
+
+Sure, I can give you a table that shows the operators in JavaScript. There are many types of operators in JavaScript, such as arithmetic, assignment, comparison, logical, bitwise, string, conditional, and more. Each operator has a symbol that represents it in the code. Here is a table that lists some of the most common operators and their symbols:
+
+| Operator type | Symbol | Example  |
+| ------------- | ------ | -------- |
+| Arithmetic    | +      | 3 + 4    |
+|               | -      | 5 - 2    |
+|               | \*     | 6 \* 7   |
+|               | /      | 8 / 4    |
+|               | %      | 9 % 2    |
+|               | \*\*   | 2 \*\* 3 |
+| Assignment    | =      | x = 5    |
+|               | +=     | x += 1   |
+|               | -=     | x -= 2   |
+|               | \*=    | x \*= 3  |
+|               | /=     | x /= 4   |
+|               | %=     | x %= 5   |
+| Comparison    | ==     | x == y   |
+|               | ===    | x === y  |
+|               | !=     | x != y   |
+|               | !==    | x !== y  |
+|               | >      | x > y    |
+|               | <      | x < y    |
+|               | >=     | x >= y   |
+|               | <=     | x <= y   |
+| Logical       | &&     | x && y   |
+|               | \|\|   | x \|\| y |
+|               | !      | !x       |
+| Bitwise       | &      | x & y    |
+|               | \|     | x \| y   |
+|               | ^      | x ^ y    |
+|               | ~      | ~x       |
+|               | <<     | x << y   |
+|               | >>     | x >> y   |
+| String        | +      |
+
+You can use the `+` operator to concatenate strings. For example, `"Hello" + "World"` will result in `"HelloWorld"`.
+
+-   Conditional | ? : |
+
+You can use the `? :` operator to create a conditional expression. For example, `x > y ? "x is greater" : "y is greater"` will return `"x is greater"` if `x` is larger than `y`, and `"y is greater"` otherwise.
+
+-   Comma |
+
+You can use the `,` operator to separate multiple expressions. For example, `x = (y = 3, z = ++y)` will assign `4` to both `x` and `z`, and `3` to `y`.
+
+-   Spread |
+
+You can use the `...` operator to spread an iterable object into individual elements. For example, `[...[1,2,3]]` will result in `[1,2,3]`.
+
+-   Delete |
+
+You can use the `delete` operator to remove a property from an object. For example, `delete obj.foo` will delete the property `foo` from the object `obj`.
+
+-   In |
+
+You can use the `in` operator to check if a property exists in an object. For example, `"foo" in obj` will return `true` if the object `obj` has a property named `foo`.
+
+-   Instanceof |
+
+You can use the `instanceof` operator to check if an object is an instance of a constructor. For example, `"Hello" instanceof String` will return `false`, but `new String("Hello") instanceof String` will return `true`.
+
+-   New |
+
+You can use the `new` operator to create a new object from a constructor. For example, `new Date()` will create a new date object with the current time.
+
+-   This |
+
+You can use the `this` keyword to refer to the current object or context. For example, in a method of an object, `this` will refer to the object itself.
+
+-   Typeof |
+
+You can use the `typeof` operator to get the type of a value. For example, `typeof "Hello"` will return `"string"`, and `typeof null` will return `"object"`.
+
+These are some of the operators in JavaScript. You can learn more about them from these sources . I hope this helps you understand JavaScript better. 😊
+
+: [JavaScript Operators - W3Schools]
+: [Operators - JavaScript \| MDN]
+: [JavaScript Operators - GeeksforGeeks]
+: [JavaScript Operators - Tutorialspoint]
+: [JavaScript Operators - JavaScript.info]
+
+### `==` and `===`
+
+just compare the values, and compare both values and types.
+
+### 流程控制
+
+#### 循环
+
+-   for
+    > 明确循环次数
+-   while
+-   `break`
+    > 跳出当前循环
+-   `if`
+
+## 函数
+
+-   声明
+    > `function`
+-   参数
+-   返回值
+-   匿名函数
+
+## 事件
+
+[1]: https://www.w3schools.com/tags/ref_eventattributes.asp
+[2]: https://developer.mozilla.org/en-US/docs/Web/Events
+[3]: https://www.w3schools.com/js/js_events.asp
+[4]: https://www.educba.com/html-events/
+
+Sure, I can give you a table to show all events of HTML. HTML events are actions that happen to HTML elements, such as loading a page, clicking a button, changing an input field, etc. JavaScript can react to these events and execute code accordingly. Here is a table that lists some of the main categories of HTML events and some examples of each:
+
+| Event category       | Description                                                                                    | Examples                                         |
+| -------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| Window events        | Events that occur on the browser window or the document                                        | onload, onresize, onscroll, onerror              |
+| Form events          | Events that occur on form elements or the form itself                                          | onchange, oninput, onsubmit, onreset             |
+| Keyboard events      | Events that occur when a user presses or releases a key                                        | onkeydown, onkeypress, onkeyup                   |
+| Mouse events         | Events that occur when a user interacts with a mouse or a touch device                         | onclick, ondblclick, onmouseover, onmouseout     |
+| Drag and drop events | Events that occur when a user drags and drops an element or a selection                        | ondrag, ondragstart, ondragend, ondrop           |
+| Clipboard events     | Events that occur when a user copies, cuts, or pastes content                                  | oncopy, oncut, onpaste                           |
+| Media events         | Events that occur when a media element (such as audio or video) is played, paused, ended, etc. | onplay, onpause, onended, onvolumechange         |
+| Animation events     | Events that occur when an animation starts, ends, or iterates                                  | animationstart, animationend, animationiteration |
+| Transition events    | Events that occur when a CSS transition starts, ends, or is canceled                           | transitionstart, transitionend, transitioncancel |
+
+You can learn more about HTML events from these sources[^1^][1] [^2^][2] [^3^][3] [^4^][4]. I hope this helps you understand HTML better. 😊
+
+## `onload`
+
+```html
+<script>
+    function show() {
+        console.log("Loaded");
+    }
+</script>
+<body onload="show()">
+    <!-- to-do -->
+</body>
+```
