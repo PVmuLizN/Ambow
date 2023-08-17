@@ -9,12 +9,23 @@ const addData = () => {
     let newTd1 = document.createElement("td");
     let newTd2 = document.createElement("td");
     let newTd3 = document.createElement("td");
+    let newTd4 = document.createElement("td");
+    let newBtn = document.createElement("button");
+    // let btnTN = "删除";
+    // let newBtnTextnode = document.createTextNode(btnTN);
+    newBtn.innerHTML = "删除";
+    newBtn.addEventListener("click", function () {
+        this.parentNode.parentNode.remove();
+    });
+
     // let newTd4 = document.createElement("td")
     newTd1.innerHTML = name;
     newTd2.innerHTML = age;
     newTd3.innerHTML = gender;
+    newTd4.appendChild(newBtn);
     newTr.appendChild(newTd1);
     newTr.appendChild(newTd2);
     newTr.appendChild(newTd3);
+    newTr.appendChild(newTd4);
     table.appendChild(newTr);
 };
