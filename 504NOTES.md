@@ -593,6 +593,9 @@ AKA: API
         arr.push(4);
         arr.reverse();
         arr.sort();
+        arr.sort((a, b) => {
+            return a - b;
+        });
         ```
 
 -   Set
@@ -623,7 +626,7 @@ AKA: API
 
 -   EventListener
 
-# RegExp
+## RegExp
 
 [1]: https://www.rexegg.com/regex-quickstart.html
 [2]: https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference
@@ -652,6 +655,37 @@ Sure, I can show you some regular expressions (RegExp) in a table. Regular expre
 | {n}     | Matches exactly n occurrences of the preceding element                | a{3}b{2}c{1}     | aaabbc                               |
 | {n,m}   | Matches at least n and at most m occurrences of the preceding element |
 
-# JSON
+## JSON
 
 带宽最小，网络传输中当作字符串来传输
+
+## BOM
+
+### Windows
+
+-   计时器
+
+    -   `let timeoutID  = setTimeout(cb [,delay], arg1, arg2,...);`
+
+        > [w3schools](https://www.w3schools.com/jsref/met_win_settimeout.asp)
+
+        ```js
+        var timeoutID;
+
+        function showAlert() {
+            timeoutID = setTimeout(alert, 3000, "setTimeout Demo!");
+        }
+
+        function clearAlert() {
+            clearTimeout(timeoutID);
+        }
+        ```
+
+    -   `setInterval(function () {element.innerHTML += "Hello"}, 1000);`
+        > [w3schools](https://www.w3schools.com/jsref/met_win_setinterval.asp)
+
+### Location
+
+[w3schools](https://www.w3schools.com/jsref/obj_location.asp)
+
+### Navigator
