@@ -689,3 +689,7 @@ Sure, I can show you some regular expressions (RegExp) in a table. Regular expre
 [w3schools](https://www.w3schools.com/jsref/obj_location.asp)
 
 ### Navigator
+# JQuery
+JQuery 对象是JQuery对象， 不是document对象
+- `document.getElementById("id")`
+    > `$('#id')`
