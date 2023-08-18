@@ -689,7 +689,132 @@ Sure, I can show you some regular expressions (RegExp) in a table. Regular expre
 [w3schools](https://www.w3schools.com/jsref/obj_location.asp)
 
 ### Navigator
-# JQuery
-JQuery 对象是JQuery对象， 不是document对象
-- `document.getElementById("id")`
+
+# jQuery
+
+JQuery 对象是 JQuery 对象， 不是 document 对象
+
+-   `var div = document.getElementById("id")`
     > `$('#id')`
+-   `div.innerHTML=""`
+    > `$('#id').html()`
+-   对象转换
+    **Sure, there are two ways to convert a jQuery object to a Document Object:**
+
+1. Using the `.get()` method:
+
+```
+var domElement = $(selector).get(0);
+```
+
+where `selector` is the jQuery selector that selects the DOM element you want to convert. The `.get()` method returns an array of DOM elements, so you need to use the `0` index to get the first element.
+
+2. Using array notation:
+
+```
+var domElement = $(selector)[0];
+```
+
+This is a shorter way to do the same thing as the `.get()` method.
+
+For example, the following code will convert the jQuery object `$('#myDiv')` to a Document Object:
+
+```
+var domElement = $( '#myDiv' ).get( 0 );
+```
+
+or
+
+```
+var domElement = $( '#myDiv' )[ 0 ];
+```
+
+The `domElement` variable will now contain a reference to the DOM element that is represented by the jQuery object `$('#myDiv')`.
+
+I hope this helps! Let me know if you have any other questions.
+
+**Sure, there are two ways to convert a Document Object to a jQuery object:**
+
+1. Using the `$()` function:
+
+```
+var jqueryObject = $(domElement);
+```
+
+where `domElement` is the Document Object you want to convert. The `$()` function takes a DOM element as its argument and returns a jQuery object that represents the element.
+
+2. Using the `.jquery()` method:
+
+```
+var jqueryObject = domElement.jquery();
+```
+
+The `.jquery()` method returns a Boolean value that indicates whether the element is a jQuery object. If the element is a jQuery object, the method will return `true`. Otherwise, it will return `false`.
+
+For example, the following code will convert the Document Object `document.getElementById('myDiv')` to a jQuery object:
+
+```
+var jqueryObject = $( document.getElementById( 'myDiv' ) );
+```
+
+or
+
+```
+var jqueryObject = document.getElementById( 'myDiv' ).jquery();
+```
+
+The `jqueryObject` variable will now contain a jQuery object that represents the DOM element `document.getElementById('myDiv')`.
+
+I hope this helps! Let me know if you have any other questions.
+
+-   绑定事件 > [w3schools](https://www.w3schools.com/jquery/jquery_ref_events.asp)
+<table>
+
+<tbody><tr>
+<th style="width:23%">Mouse Events</th>
+<th style="width:25%">Keyboard Events</th>
+<th style="width:22%">Form Events</th>
+<th>Document/Window Events</th>
+</tr>
+<tr>
+<td>click</td>
+<td>keypress</td>
+<td>submit</td>
+<td>load</td>
+</tr>
+<tr>
+<td>dblclick</td>
+<td>keydown</td>
+<td>change</td>
+<td>resize</td>
+</tr>
+<tr>
+<td>mouseenter</td>
+<td>keyup</td>
+<td>focus</td>
+<td>scroll</td>
+</tr>
+<tr>
+<td>mouseleave</td>
+<td>&nbsp;</td>
+<td>blur</td>
+<td>unload</td>
+</tr>
+</tbody>
+</table>
+
+```js
+$("p").on({
+    mouseenter: function () {
+        $(this).css("background-color", "lightgray");
+    },
+    mouseleave: function () {
+        $(this).css("background-color", "lightblue");
+    },
+    click: function () {
+        $(this).css("background-color", "yellow");
+    },
+});
+```
+
+-   **jQuery 数组中的一个元素是 js 的一个对象**
