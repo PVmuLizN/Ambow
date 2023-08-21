@@ -819,7 +819,8 @@ $("p").on({
 
 -   **jQuery 数组中的一个元素是 js 的一个对象**
 
---------------------------------
+---
+
 **This course is on [youtube](https://www.youtube.com/watch?v=QhQ4m5g2fhA)**
 
 # What is jQuery
