@@ -1,0 +1,16 @@
+.mvdata {
+    float: left;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+}
+#intersection{
+    padding: 30px;
+}
