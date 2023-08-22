@@ -910,3 +910,14 @@ Less code, Do more
         "slow"
     );
     ```
+
+# JavaEE
+
+## Tomcat
+
+-   bin
+-   bat
+-   bash
+
+## Servlet
+在本地部署tomcat+servlet
