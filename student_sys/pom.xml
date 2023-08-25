@@ -17,6 +17,24 @@
   </properties>
 
   <dependencies>
+
+    <dependency>
+      <groupId>tomcat</groupId>
+      <artifactId>catalina-cluster</artifactId>
+      <version>5.5.23</version>
+    </dependency>
+
+
+    
+    
+
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.33</version>
+    </dependency>
+
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
@@ -35,17 +53,17 @@
       <version>1.2.4</version>
       <exclusions>
         <exclusion>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
+          <groupId>javax.servlet</groupId>
+          <artifactId>servlet-api</artifactId>
         </exclusion>
         <exclusion>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
+          <groupId>javax.servlet.jsp</groupId>
+          <artifactId>jsp-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
   </dependencies>
-  
+
   <build>
     <finalName>student_sys</finalName>
     <plugins>
@@ -60,5 +78,5 @@
       </plugin>
     </plugins>
   </build>
-  
+
 </project>
