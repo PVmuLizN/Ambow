@@ -1056,8 +1056,47 @@ response.sendRedirect()
 -   基本语法
     -   <% <%--java 代码注释--%> %>
 -   指令
-    > `page`, `include`, `taglib`
+    > `page`, `include`, `taglib`, `import`
+    -   `error-page`,``
 -   表达式
     > `<%= %>`
-- 声明
+-   声明
     > `<%!   %>`
+-   `out` 对象
+
+```java
+HttpSession session = request.getSession();
+session.setAttribute("key", "value");
+```
+
+## JSP 的九个隐式对象
+
+```jsp
+<%
+
+<%-- request， 一侧请求有效
+     response
+     application, 与reques一样用于数据保存,多个jsp共享 session
+     pageContext，整个工程共享
+     用于数据的保存和获取
+     --%>
+%>
+```
+
+## EL
+
+-   语法
+
+        > `${msg}`
+
+        ```jsp
+        <%=request.getAtrribute("msg") %>
+        ```
+- 注意事项：
+    1. 没有下标越界
+    2. 没有异常
+    3. 
+
+    [javapoint](https://www.javatpoint.com/EL-expression-in-jsp)
+## JSTL 
+
