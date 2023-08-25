@@ -990,6 +990,8 @@ servlet 对象单例，如果全局变量，不同线程会相互影响。
 
 对象自动创建，请求接收时自动创建，由 servlet container （tomcat） 创建。
 
+###### `HTTPServletRequest`
+
 ```java
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException {
   request.getParameter();
@@ -997,6 +999,10 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
   request.getLocalPath();
   request.getLocalAddr();
   request.getRemoteHost();
+  request.getRequestDispatcher();
+  request.getRequestDispatcher().forward();
+  request.setCharacterEncoding('UTF-8');
+
   ServletContext servletContext = request.getServletContext();
   servletContext.setAttribute("","");
 
@@ -1023,3 +1029,35 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
     >     Parameters:
     >         name - a String specifying the name of the attribute
     >         o - the Object to be stored
+
+###### `HTTPServletResponse`
+
+```java
+response.getContentType()
+// 字节输出流
+ServletOutputStream outputStream = response.getOutputStream()
+msg.getBytes()
+// 重定向
+response.sendRedirect()
+```
+
+-   JSP
+
+#### setDataHeader(String name, long time)
+
+控制缓存,不再请求服务器，而是从浏览器缓存中获取数据
+
+# JSP
+
+-   一种特殊的 Servlet
+    > 由 tomcat 翻译成 java 文件
+-   运行在服务器上
+-   动态生成网页的一种技术
+-   基本语法
+    -   <% <%--java 代码注释--%> %>
+-   指令
+    > `page`, `include`, `taglib`
+-   表达式
+    > `<%= %>`
+- 声明
+    > `<%!   %>`
