@@ -6,11 +6,13 @@ import java.io.PrintWriter;
 
 import dao.UserDao;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import po.User;
 
+@WebServlet("/QueryId")
 public class QueryIdServlet extends HttpServlet {
 
     @Override

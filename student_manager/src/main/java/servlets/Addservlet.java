@@ -11,10 +11,12 @@ import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import jakarta.servlet.annotation.WebServlet;
 import po.User;
 
 import java.io.IOException;
 
+@WebServlet("/Add")
 public class Addservlet implements Servlet {
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
