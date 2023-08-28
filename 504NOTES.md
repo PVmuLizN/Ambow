@@ -1083,6 +1083,10 @@ session.setAttribute("key", "value");
 %>
 ```
 
+## JSP 的四大作用域
+
+JSP Scopes: Page, Request, Session, and Application.
+
 ## EL
 
 -   语法
@@ -1092,11 +1096,179 @@ session.setAttribute("key", "value");
         ```jsp
         <%=request.getAtrribute("msg") %>
         ```
-- 注意事项：
+
+-   注意事项：
+
     1. 没有下标越界
     2. 没有异常
-    3. 
+    3.
 
     [javapoint](https://www.javatpoint.com/EL-expression-in-jsp)
-## JSTL 
 
+## Cookies and Session
+
+cookies: get data from browser, store data in cookie, send cookies back to browser.
+session 只存在于服务器中。
+
+-   cons and pros
+    -   session: 安全，空间大，方便。
+    -   cookie：空间小，不安全。
+    -   session ID 存储在 cookies 中
+
+### cookies vs. session
+
+[1]: https://www.youtube.com/watch?v=GhrvZ5nUWNg
+[2]: https://www.youtube.com/watch?v=GihQAC1I39Q
+[3]: https://www.youtube.com/watch?v=AwicscsvGLg
+[4]: https://www.geeksforgeeks.org/difference-between-session-and-cookies/
+[5]: https://stackoverflow.com/questions/2240556/when-should-i-use-session-variables-instead-of-cookies
+[6]: https://www.javatpoint.com/session-vs-cookies
+[7]: https://askanydifference.com/difference-between-a-cookie-and-a-session/
+[8]: https://www.guru99.com/difference-between-cookie-session.html
+[9]: http://codepen.io/beaucarnes/pen/KmeRMx?editors=0011
+[10]: https://twitter.com/carnesbeau
+
+Cookies and sessions are both ways of storing data on the web, but they have some important differences. Here is a summary of the main differences:
+
+-   Cookies are stored on the client-side, which means they are saved on the user's browser or computer. Sessions are stored on the server-side, which means they are saved on the web server that hosts the website.
+-   Cookies can persist for a long time, depending on how they are set by the website. Sessions usually expire when the user closes the browser or logs out of the website.
+-   Cookies can only store a limited amount of data, usually up to 4 KB. Sessions can store unlimited data, as long as there is enough memory on the server.
+-   Cookies are less secure than sessions, because they can be seen, modified, or intercepted by anyone who has access to the user's browser or computer. Sessions are more secure than cookies, because they are encrypted and only accessible by the server.
+-   Cookies are sent with every request to the website, which increases the bandwidth and may affect the performance. Sessions are only identified by a session ID, which is usually stored in a cookie or in the URL, and the actual data is loaded from the server.
+
+If you want to learn more about cookies and sessions, you can watch some of these videos[^1^][1] [^2^][2] [^3^][3] or read some of these articles[^4^][4] [^5^][5] [^6^][6] [^7^][7] [^8^][8]. I hope this helps you understand the difference between cookies and sessions. 😊
+
+## JSTL
+
+-   提供了流程控制
+-   四大模块
+    1. 核心模块：流程
+    2. 日期
+    3. SQL
+    4. xml
+
+### c 标签库：约定为`c` (核心标签库)
+
+[tutorialspoint](https://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm)
+
+<table>
+<tbody><tr>
+<th style="width:11%">S.No.</th>
+<th style="text-align:center;">Tag &amp; Description</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1</td>
+<td><a href="/jsp/jstl_core_out_tag.htm"> &lt;c:out&gt;</a>
+<p>Like &lt;%= ... &gt;, but for expressions.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">2</td>
+<td><a href="/jsp/jstl_core_set_tag.htm">&lt;c:set &gt;</a>
+<p>Sets the result of an expression evaluation in a <b>'scope'</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">3</td>
+<td><a href="/jsp/jstl_core_remove_tag.htm">&lt;c:remove &gt;</a>
+<p>Removes a <b>scoped variable</b> (from a particular scope, if specified).</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">4</td>
+<td><a href="/jsp/jstl_core_catch_tag.htm">&lt;c:catch&gt;</a>
+<p>Catches any <b>Throwable</b> that occurs in its body and optionally exposes it.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">5</td>
+<td><a href="/jsp/jstl_core_if_tag.htm">&lt;c:if&gt;</a>
+<p>Simple conditional tag which evalutes its body if the supplied condition is true.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">6</td>
+<td><a href="/jsp/jstl_core_choose_tag.htm">&lt;c:choose&gt;</a>
+<p>Simple conditional tag that establishes a context for mutually exclusive conditional operations, marked by <b>&lt;when&gt;</b> and <b>&lt;otherwise&gt;</b>.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">7</td>
+<td><a href="/jsp/jstl_core_choose_tag.htm">&lt;c:when&gt;</a>
+<p>Subtag of <b>&lt;choose&gt;</b> that includes its body if its condition evalutes to <b>'true'</b>.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">8</td>
+<td><a href="/jsp/jstl_core_choose_tag.htm">&lt;c:otherwise &gt;</a>
+<p>Subtag of <b>&lt;choose&gt;</b> that follows the <b>&lt;when&gt;</b> tags and runs only if all of the prior conditions evaluated to <b>'false'</b>.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">9</td>
+<td><a href="/jsp/jstl_core_import_tag.htm">&lt;c:import&gt;</a>
+<p>Retrieves an absolute or relative URL and exposes its contents to either the page, a String in <b>'var'</b>, or a Reader in <b>'varReader'</b>.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">10</td>
+<td><a href="/jsp/jstl_core_foreach_tag.htm">&lt;c:forEach &gt;</a>
+<p>The basic iteration tag, accepting many different collection types and supporting subsetting and other functionality .</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">11</td>
+<td><a href="/jsp/jstl_core_foreach_tag.htm">&lt;c:forTokens&gt;</a>
+<p>Iterates over tokens, separated by the supplied delimeters.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">12</td>
+<td><a href="/jsp/jstl_core_param_tag.htm">&lt;c:param&gt;</a>
+<p>Adds a parameter to a containing <b>'import'</b> tag's URL.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">13</td>
+<td><a href="/jsp/jstl_core_redirect_tag.htm">&lt;c:redirect &gt;</a>
+<p>Redirects to a new URL.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">14</td>
+<td><a href="/jsp/jstl_core_url_tag.htm">&lt;c:url&gt;</a>
+<p>Creates a URL with optional query parameters</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+```html
+<c:set var="loginname" scope="request" />
+
+<c:remove />
+
+<c:if test="${5>3}">5>3</c:if>
+
+<c:forEach var="i" begin="1" end="10" step="1">
+    输出i=${i}
+</c:forEach >
+
+<c:forEach items="${users}" var="user">
+    于谦 == ${user.name}
+</c:forEact>
+<c:choose>
+
+   <c:when test = "${salary <= 0}">
+      Salary is very low to survive.
+   </c:when>
+
+   <c:when test = "${salary > 1000}">
+      Salary is very good.
+   </c:when>
+
+   <c:otherwise>
+      No comment sir...
+   </c:otherwise>
+</c:choose>
+```
